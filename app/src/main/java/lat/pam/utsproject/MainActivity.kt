@@ -26,7 +26,6 @@ class MainActivity : AppCompatActivity() {
         val loginButton = findViewById<Button>(R.id.btnLogin)
         val registerTextView = findViewById<TextView>(R.id.tvRegister)
 
-        // Tombol Login
         loginButton.setOnClickListener {
             val inputUsername = usernameEditText.text.toString()
             val inputPassword = passwordEditText.text.toString()
