@@ -8,27 +8,39 @@ import android.widget.TextView
 import androidx.recyclerview.widget.RecyclerView
 
 
-class FoodAdapter(private val foodList: List<Food>) : RecyclerView.Adapter<FoodAdapter.FoodViewHolder>() {
+class FoodAdapter(
+    private val foodList: List<Food>,
+    private val onItemClick: (Food) -> Unit
+) : RecyclerView.Adapter<FoodAdapter.FoodViewHolder>() {
 
     override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): FoodViewHolder {
         val view = LayoutInflater.from(parent.context).inflate(R.layout.item_layout_food, parent, false)
-        return FoodViewHolder(view)
+        return FoodViewHolder(view,onItemClick)
     }
 
     override fun onBindViewHolder(holder: FoodViewHolder, position: Int) {
         val food = foodList[position]
-        holder.foodName.text = food.name
-        holder.foodDescription.text = food.description
-        holder.foodImage.setImageResource(food.imageResourceId)
+        holder.bind(food)
     }
+
 
     override fun getItemCount(): Int {
         return foodList.size
     }
 
-    class FoodViewHolder(itemView: View) : RecyclerView.ViewHolder(itemView) {
-        val foodImage: ImageView = itemView.findViewById(R.id.foodImage)
-        val foodName: TextView = itemView.findViewById(R.id.foodName)
-        val foodDescription: TextView = itemView.findViewById(R.id.foodDescription)
+    class FoodViewHolder(itemView: View, private val onItemClick: (Food) -> Unit) : RecyclerView.ViewHolder(itemView) {
+        private val foodImage: ImageView = itemView.findViewById(R.id.foodImage)
+        private val foodName: TextView = itemView.findViewById(R.id.foodName)
+        private val foodDescription: TextView = itemView.findViewById(R.id.foodDescription)
+
+        fun bind(food: Food) {
+            foodName.text = food.name
+            foodDescription.text = food.description
+            foodImage.setImageResource(food.imageResourceId)
+
+            itemView.setOnClickListener {
+                onItemClick(food)
+            }
+        }
     }
 }
