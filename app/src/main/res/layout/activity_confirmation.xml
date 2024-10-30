@@ -14,7 +14,7 @@
         android:id="@+id/tvTitle"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="Order Food"
+        android:text="Order Confirmation"
         android:textSize="24sp"
         android:textStyle="bold"
         android:layout_gravity="center_horizontal"
@@ -22,33 +22,37 @@
 
     <!-- Confirmation Nama Makanan -->
     <TextView
+        android:id="@+id/tvFoodName"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="Food Name: Batagor"
+        android:text="Food Name: "
         android:textSize="18sp"
         android:layout_marginBottom="8dp"/>
 
     <!-- Confirmation Jumlah Porsi -->
     <TextView
+        android:id="@+id/tvServings"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="Number of Servings: 2 pax"
+        android:text="Number of Servings: "
         android:textSize="18sp"
         android:layout_marginBottom="8dp"/>
 
     <!-- Confirmation Nama pengorder -->
     <TextView
+        android:id="@+id/tvName"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="Ordering Name: Usep"
+        android:text="Ordering Name: "
         android:textSize="18sp"
         android:layout_marginBottom="8dp"/>
 
     <!-- Input Catatan Tambahan -->
     <TextView
+        android:id="@+id/tvNotes"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="Additional Notes: Tidak Pedas"
+        android:text="Additional Notes: "
         android:textSize="18sp"
         android:layout_marginBottom="16dp"/>
 
