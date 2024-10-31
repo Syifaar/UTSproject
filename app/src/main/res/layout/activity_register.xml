@@ -5,7 +5,7 @@
     android:id="@+id/main"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="@color/blue"
+    android:background="@color/LavenderBlush"
     android:padding="16dp"
     tools:context=".RegisterActivity">
 
@@ -66,8 +66,7 @@
                 android:text="Register"
                 android:layout_gravity="center_horizontal"
                 android:paddingHorizontal="32dp"
-                android:textColor="@android:color/white"
-                android:backgroundTint="@color/ashgrey"/>
+                android:textColor="@android:color/white" />
         </LinearLayout>
     </androidx.cardview.widget.CardView>
 </RelativeLayout>

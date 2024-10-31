@@ -2,6 +2,6 @@
 <resources>
     <color name="black">#FF000000</color>
     <color name="white">#FFFFFFFF</color>
-    <color name="blue">#0000FF</color>
-    <color name="ashgrey">#0000FF</color>
+    <color name="LavenderBlush">#FFF0F5</color>
+    <color name="DarkBlue">#FF000080</color>
 </resources>

@@ -23,11 +23,36 @@
         android:layout_gravity="center_horizontal"
         android:layout_marginBottom="16dp"/>
 
+    <!-- Label untuk daftar minuman -->
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Food"
+        android:textSize="18sp"
+        android:textStyle="bold"
+        android:layout_marginBottom="8dp" />
+
     <!-- RecyclerView untuk Daftar Makanan -->
     <androidx.recyclerview.widget.RecyclerView
-        android:id="@+id/recyclerView"
+        android:id="@+id/foodrecyclerView"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:scrollbars="vertical"/>
+        android:scrollbars="vertical"
+        android:layout_marginBottom="16dp"/>
 
+    <!-- Label untuk daftar minuman -->
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Beverages"
+        android:textSize="18sp"
+        android:textStyle="bold"
+        android:layout_marginBottom="8dp" />
+
+    <!-- RecyclerView untuk Daftar Minuman -->
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/drinkrecyclerView"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:scrollbars="vertical" />
 </LinearLayout>
